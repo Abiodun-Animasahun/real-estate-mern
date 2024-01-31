@@ -254,20 +254,20 @@ export default function Profile() {
             </Link>
           </form>
           <div className="flex justify-between mt-5 ">
-            <span
+            <button
               onClick={handleDeleteUser}
-              className="text-red-700 
+              className="text-white bg-red-800 hover:bg-red-700 rounded-lg p-3 px-4
         cursor-pointer"
             >
               Delete
-            </span>
-            <span
+            </button>
+            <button
               onClick={handleSignOut}
-              className="text-red-700 
+              className="text-white bg-red-800 hover:bg-red-700 rounded-lg p-3 
         cursor-pointer"
             >
               Sign out
-            </span>
+            </button>
           </div>
           <p className="text-red-700 mt-5">{error ? error : ""}</p>
           <p className="text-green-700 mt-5">
@@ -275,10 +275,10 @@ export default function Profile() {
           </p>
           <button
             onClick={handleShowListings}
-            className="text-green-700
-         w-full"
+            className="text-white
+         w-full bg-green-900 hover:bg-green-600 p-4 rounded-lg uppercase"
           >
-            Show Listings
+            Show Listing
           </button>
           <p className="text-red-700 mt-5">
             {showListingsError ? "Error showing listings" : ""}
