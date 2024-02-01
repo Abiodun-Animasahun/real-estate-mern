@@ -1,8 +1,10 @@
-import { FaBars, FaSearch, FaTimes, FaToggleOn, FaToggleOff } from "react-icons/fa";
+import { FaBars, FaSearch, FaTimes } from "react-icons/fa";
+import { ToggleLeft, ToggleRight, SunDim, Moon } from "@phosphor-icons/react";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useContext, useEffect, useState } from "react";
 import { DarkModeContext } from "../components/DarkModeContext";
+
 
 
 
@@ -76,7 +78,7 @@ export default function Header() {
           </button>
         </form>
         <button onClick={toggleDarkMode}>
-            {isDarkMode ? <FaToggleOn className="dark:text-white " /> : <FaToggleOff className="" />}
+            {isDarkMode ? <Moon size={32} weight="duotone" color="white" /> : <SunDim size={32} weight="duotone" />}
           </button>
 
         <ul className={`flex gap-4 dark:text-gray-100`}>
@@ -115,9 +117,9 @@ export default function Header() {
           
           <button onClick={toggleMenu} className="lg:hidden md:hidden ">
             {isOpen ? (
-              <FaTimes className={`text-slate-700  dark:text-gray-100`} />
+              <FaTimes />
             ) : (
-              <FaBars className={`text-slate-700  dark:text-gray-100`} />
+              <FaBars />
             )}
           </button>
         </ul>

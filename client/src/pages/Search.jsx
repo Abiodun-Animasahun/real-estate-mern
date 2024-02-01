@@ -88,8 +88,9 @@ export default function Search() {
     ) {
       setSidebardata({
         ...sidebardata,
-        [e.target.id]:
-          e.target.checked || e.target.checked === "true" ? true : false,
+        [e.target.id]: !sidebardata[e.target.id]
+       //   e.target.checked || e.target.checked === "true" ? true : false,
+       
       });
     }
 
@@ -131,14 +132,14 @@ export default function Search() {
   };
 
   return (
-    <div className={`${isDarkMode && 'dark'}`}>
+    <div className={isDarkMode ? 'dark' : ''}>
     <div className="flex flex-col md:flex-row dark:bg-slate-800">
       <div
         className="p-7 border-b-2 md:border-r-2
         md:min-h-screen"
       >
-        <form className="flex flex-col gap-8">
-          <div onSubmit={handleSubmit} className="flex items-center gap-2">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-8">
+          <div className="flex items-center gap-2">
             <label className="whitespace-nowrap font-semibold dark:text-gray-100">
               Search Term:
             </label>

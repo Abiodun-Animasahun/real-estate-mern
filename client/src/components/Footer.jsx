@@ -10,10 +10,9 @@ export default function Footer() {
         <div className='dark:bg-slate-800 dark:text-gray-300'>
         <p className=' text-base text-center '>copyright&#169; 2024. <span className='font-style: italic'>Animasahun Abiodun Monsur</span></p>
         <ul className='flex flex-row text-center justify-center py-6 gap-8'>
-            <li><a href='#'><FaFacebook /></a></li>
-            <li><a href='#'><FaTwitter /></a></li>
-            <li><a href='#'><FaInstagram /></a></li>
-            
+            <li><a href='#'><FaFacebook color='grey'/></a></li>
+            <li><a href='#'><FaTwitter color='grey' /></a></li>
+            <li><a href='#'><FaInstagram  color="grey"/></a></li>
         </ul>
         </div>
     </div>
